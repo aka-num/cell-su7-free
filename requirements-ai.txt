@@ -1,0 +1,5 @@
+# Only needed when explicitly using an external AI provider.
+requests>=2.31,<3
+# Optional: OS credential storage; without keyring, paste key in GUI session or
+# use CELL_SU7_API_KEY / your custom environment variable.
+# keyring>=25,<27

@@ -1,0 +1,7 @@
+# All open-source; no cloud services. Python 3.10+
+python-pptx>=1.0.2,<2
+numpy>=1.26,<3
+Pillow>=10,<13
+opencv-python-headless>=4.8,<5
+defusedxml>=0.7.1,<1
+shapely>=2.0,<3

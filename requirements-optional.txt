@@ -1,0 +1,4 @@
+# Local Tesseract OCR. Also install Tesseract executable + language packs.
+pytesseract>=0.3.10,<1
+# Visual A/B quality comparison and editable PDF output.
+CairoSVG>=2.7,<3

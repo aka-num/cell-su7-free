@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cell-su7-remastered"
+version = "4.2.1"
+description = "Local-first editable scientific figure reconstruction with optional AI providers"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+readme = "README.md"
+authors = [{name = "Cell SU7 Remastered Contributors"}]
+dependencies = [
+    "python-pptx>=1.0.2,<2", "numpy>=1.26,<3", "Pillow>=10,<13",
+    "opencv-python-headless>=4.8,<5", "defusedxml>=0.7.1,<1", "shapely>=2.0,<3"
+]
+
+[project.optional-dependencies]
+ocr = ["pytesseract>=0.3.10,<1"]
+preview = ["CairoSVG>=2.7,<3"]
+trace = ["vtracer>=0.6.12,<2"]
+ai = ["requests>=2.31,<3", "keyring>=25,<27"]
+test = ["pytest>=8,<10", "CairoSVG>=2.7,<3", "pytesseract>=0.3.10,<1", "requests>=2.31,<3"]
+
+[project.scripts]
+cell-su7 = "app:cli"
+
+[tool.setuptools]
+py-modules = ["app", "engine", "precision_trace", "geometry", "clipping", "quality_report", "fontmetrics", "ai_bridge", "deepseek_workflow", "server", "doctor", "studio_ui", "ui_flow", "visual_editor", "perceptual_color", "structure_aware"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

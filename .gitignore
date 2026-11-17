@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*secrets*.json
+*credentials*.json
+# User data, local runs, and generated outputs
+runs/
+outputs/
+results/
+*.pptx
+*.pdf
+*.html
+*.log
+*.sqlite
+.DS_Store
